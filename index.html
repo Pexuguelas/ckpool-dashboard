@@ -225,10 +225,10 @@
         let chart=null, workerChart=null, lastData=null;
         // Difficulty and price data (updated from APIs)
         let CHAINS = {
-            btc: { name: 'BTC', emoji: '₿', diff: 1.348238373e14, price: 60688, reward: 3.125, color: '#f0a500' },
-            bch: { name: 'BCH', emoji: '🅱️', diff: 4.99244753561e11, price: 197.52, reward: 6.25, color: '#4caf50' },
-            bsv: { name: 'BSV', emoji: '🔄', diff: 7.1e10, price: 13.97, reward: 6.25, color: '#6e9eff' },
-            xec: { name: 'XEC', emoji: '⚡', diff: 6.135868195e9, price: 0.00000504, reward: 12500000, color: '#e91e63' }
+            btc: { name: 'BTC', emoji: '₿', diff: 1.348238373e14, price: 60688, reward: 3.125, color: '#f0a500', web: 'https://bitcoin.org', desc: 'Bitcoin — la primera y mayor cryptocurrency' },
+            bch: { name: 'BCH', emoji: '🅱️', diff: 4.99244753561e11, price: 197.52, reward: 6.25, color: '#4caf50', web: 'https://bch.info', desc: 'Bitcoin Cash — fork de Bitcoin con bloques más grandes' },
+            bsv: { name: 'BSV', emoji: '🔄', diff: 7.1e10, price: 13.97, reward: 6.25, color: '#6e9eff', web: 'https://bitcoinsv.com', desc: 'Bitcoin SV — fork de BCH enfocado en escalabilidad on-chain' },
+            xec: { name: 'XEC', emoji: '⚡', diff: 6.135868195e9, price: 0.00000504, reward: 12500000, color: '#e91e63', web: 'https://e.cash', desc: 'eCash (XEC) — fork de BCH con re-denominación, dificultad muy baja' }
         };
 
         function getWallet() { return localStorage.getItem('ckpool_wallet') || ''; }
@@ -279,7 +279,7 @@
             const progress = bestshare > 0 ? (bestshare / c.diff * 100).toFixed(6) : '0';
 
             document.getElementById('calcResults').innerHTML = `
-                <div class="calc-result-card"><h4>${c.emoji} Cadena</h4><div class="calc-value" style="color:${c.color}">${c.name}</div><div class="calc-sub">Dificultad: ${formatNum(Math.round(c.diff))}</div></div>
+                <div class="calc-result-card"><h4>${c.emoji} Cadena</h4><div class="calc-value" style="color:${c.color}">${c.name}</div><div class="calc-sub">Dificultad: ${formatNum(Math.round(c.diff))}</div><div class="calc-sub" style="margin-top:6px"><a href="${c.web}" target="_blank" style="color:${c.color};text-decoration:underline">🌐 Web oficial</a></div><div class="calc-sub" style="margin-top:4px;color:#555;font-size:0.75em">${c.desc}</div></div>
                 <div class="calc-result-card"><h4>Probabilidad/día</h4><div class="calc-value" style="color:#6e9eff">1 entre ${formatNum(Math.round(1/probPerDay))}</div><div class="calc-sub">${(probPerDay*100).toFixed(6)}% por día</div></div>
                 <div class="calc-result-card"><h4>Tiempo estimado</h4><div class="calc-value" style="color:#4caf50">${formatTime(daysPerBlock * 86400)}</div><div class="calc-sub">1 bloque cada ~${(daysPerBlock/365).toFixed(1)} años</div></div>
                 <div class="calc-result-card"><h4>Recompensa bloque</h4><div class="calc-value" style="color:${c.color}">${formatNum(c.reward)} ${c.name}</div><div class="calc-sub">≈ $${formatNum(Math.round(blockValueUSD))}</div></div>
@@ -299,7 +299,7 @@
             rows.sort((a,b) => b.ev - a.ev);
 
             let tableHTML = `<h4>📊 Comparativa SHA-256 con ${hashrateTH} TH/s — ${rows.length} chains</h4><table><tr><th>Métrica</th>`;
-            rows.forEach(r => { tableHTML += `<th>${r.emoji} ${r.name}</th>`; });
+            rows.forEach(r => { tableHTML += `<th><a href="${r.web}" target="_blank" style="color:${r.color};text-decoration:underline">${r.emoji} ${r.name}</a></th>`; });
             tableHTML += `</tr>`;
 
             const metrics = [
