@@ -148,30 +148,6 @@
             </table>
         </div>
 
-        <!-- Calculator section -->
-        <div class="calc-section">
-            <h3>🧮 Calculadora de Bloque — ¿Cuánto tardas en encontrar uno?</h3>
-            <div class="calc-input-row">
-                <div class="calc-field">
-                    <label>Tu hashrate total (TH/s)</label>
-                    <input type="number" id="calcHashrate" value="13" min="0.1" step="0.1" style="width:120px" />
-                </div>
-                <div class="calc-field">
-                    <label>Cadena</label>
-                    <select id="calcChain" onchange="updateCalculator()">
-                        <option value="btc">₿ BTC</option>
-                        <option value="bch">🅱️ BCH</option>
-                    </select>
-                </div>
-                <div class="calc-field">
-                    <label>&nbsp;</label>
-                    <button onclick="updateCalculator()" style="background:#f0a500;color:#000;border:none;border-radius:8px;padding:9px 20px;cursor:pointer;font-weight:bold;">Calcular</button>
-                </div>
-            </div>
-            <div class="calc-results" id="calcResults"></div>
-            <div class="calc-comparison" id="calcComparison"></div>
-        </div>
-
         <!-- Connection info section -->
         <div class="connection-section">
             <h3>🔌 Información de Conexión — ckpool</h3>
@@ -207,6 +183,32 @@
                 💡 <strong>Cómo conectar:</strong> Apunta tu ASIC a <code style="color:#f0a500;">stratum+tcp://stratum.ckpool.org:3333</code> con usuario <code style="color:#f0a500;">tuWallet.workerName</code> y password <code style="color:#f0a500;">x</code>. Para BCH usa <code style="color:#f0a500;">stratum.bcckpool.com:3333</code>.
             </div>
         </div>
+
+        <!-- Calculator section (DEBAJO de info de conexión) -->
+        <div class="calc-section">
+            <h3>🧮 Calculadora de Bloque SHA-256 — ¿Cuánto tardas en encontrar uno?</h3>
+            <div class="calc-input-row">
+                <div class="calc-field">
+                    <label>Tu hashrate total (TH/s)</label>
+                    <input type="number" id="calcHashrate" value="13" min="0.1" step="0.1" style="width:120px" />
+                </div>
+                <div class="calc-field">
+                    <label>Cadena</label>
+                    <select id="calcChain" onchange="updateCalculator()">
+                        <option value="btc">₿ BTC</option>
+                        <option value="bch">🅱️ BCH</option>
+                        <option value="bsv">🔄 BSV</option>
+                        <option value="xec">⚡ eCash</option>
+                    </select>
+                </div>
+                <div class="calc-field">
+                    <label>&nbsp;</label>
+                    <button onclick="updateCalculator()" style="background:#f0a500;color:#000;border:none;border-radius:8px;padding:9px 20px;cursor:pointer;font-weight:bold;">Calcular</button>
+                </div>
+            </div>
+            <div class="calc-results" id="calcResults"></div>
+            <div class="calc-comparison" id="calcComparison"></div>
+        </div>
     </div>
 
     <div id="workerDetail" style="display:none;">
@@ -222,12 +224,12 @@
     <script>
         let chart=null, workerChart=null, lastData=null;
         // Difficulty and price data (updated from APIs)
-        let BTC_DIFF = 1.348238373e14;
-        let BCH_DIFF = 4.99244753561e11;
-        let BTC_PRICE = 60688;
-        let BCH_PRICE = 197.52;
-        let BTC_REWARD = 3.125;
-        let BCH_REWARD = 6.25;
+        let CHAINS = {
+            btc: { name: 'BTC', emoji: '₿', diff: 1.348238373e14, price: 60688, reward: 3.125, color: '#f0a500' },
+            bch: { name: 'BCH', emoji: '🅱️', diff: 4.99244753561e11, price: 197.52, reward: 6.25, color: '#4caf50' },
+            bsv: { name: 'BSV', emoji: '🔄', diff: 7.1e10, price: 13.97, reward: 6.25, color: '#6e9eff' },
+            xec: { name: 'XEC', emoji: '⚡', diff: 6.135868195e9, price: 0.00000504, reward: 12500000, color: '#e91e63' }
+        };
 
         function getWallet() { return localStorage.getItem('ckpool_wallet') || ''; }
         function setWallet() {
@@ -265,59 +267,63 @@
 
         function updateCalculator() {
             const hashrateTH = parseFloat(document.getElementById('calcHashrate').value) || 0;
-            const chain = document.getElementById('calcChain').value;
-            const hashrateHS = hashrateTH * 1e12; // Convert TH/s to H/s
+            const chainKey = document.getElementById('calcChain').value;
+            const hashrateHS = hashrateTH * 1e12;
+            const c = CHAINS[chainKey];
 
-            const diff = chain === 'btc' ? BTC_DIFF : BCH_DIFF;
-            const price = chain === 'btc' ? BTC_PRICE : BCH_PRICE;
-            const reward = chain === 'btc' ? BTC_REWARD : BCH_REWARD;
-            const chainName = chain === 'btc' ? 'BTC' : 'BCH';
-            const chainEmoji = chain === 'btc' ? '₿' : '🅱️';
-
-            // Probability of finding a block per day
-            // P(block/day) = (hashrate * 86400) / (difficulty * 2^32)
-            const probPerDay = (hashrateHS * 86400) / (diff * Math.pow(2, 32));
+            const probPerDay = (hashrateHS * 86400) / (c.diff * Math.pow(2, 32));
             const daysPerBlock = probPerDay > 0 ? 1 / probPerDay : Infinity;
-            const blockValueUSD = reward * price;
+            const blockValueUSD = c.reward * c.price;
             const expectedValueDay = probPerDay * blockValueUSD;
-            const expectedValueMonth = expectedValueDay * 30;
-            const expectedValueYear = expectedValueDay * 365;
-
-            // Progress based on bestshare if available
             const bestshare = lastData ? parseFloat(lastData.bestshare || 0) : 0;
-            const progress = bestshare > 0 ? (bestshare / diff * 100).toFixed(6) : '0';
+            const progress = bestshare > 0 ? (bestshare / c.diff * 100).toFixed(6) : '0';
 
             document.getElementById('calcResults').innerHTML = `
-                <div class="calc-result-card"><h4>${chainEmoji} Cadena</h4><div class="calc-value" style="color:#f0a500">${chainName}</div><div class="calc-sub">Dificultad: ${formatNum(Math.round(diff))}</div></div>
+                <div class="calc-result-card"><h4>${c.emoji} Cadena</h4><div class="calc-value" style="color:${c.color}">${c.name}</div><div class="calc-sub">Dificultad: ${formatNum(Math.round(c.diff))}</div></div>
                 <div class="calc-result-card"><h4>Probabilidad/día</h4><div class="calc-value" style="color:#6e9eff">1 entre ${formatNum(Math.round(1/probPerDay))}</div><div class="calc-sub">${(probPerDay*100).toFixed(6)}% por día</div></div>
                 <div class="calc-result-card"><h4>Tiempo estimado</h4><div class="calc-value" style="color:#4caf50">${formatTime(daysPerBlock * 86400)}</div><div class="calc-sub">1 bloque cada ~${(daysPerBlock/365).toFixed(1)} años</div></div>
-                <div class="calc-result-card"><h4>Recompensa bloque</h4><div class="calc-value" style="color:#f0a500">${reward} ${chainName}</div><div class="calc-sub">≈ $${formatNum(Math.round(blockValueUSD))}</div></div>
+                <div class="calc-result-card"><h4>Recompensa bloque</h4><div class="calc-value" style="color:${c.color}">${formatNum(c.reward)} ${c.name}</div><div class="calc-sub">≈ $${formatNum(Math.round(blockValueUSD))}</div></div>
                 <div class="calc-result-card"><h4>Valor esperado/día</h4><div class="calc-value" style="color:#4caf50">$${expectedValueDay.toFixed(4)}</div><div class="calc-sub">Probabilidad × recompensa</div></div>
-                <div class="calc-result-card"><h4>Valor esperado/mes</h4><div class="calc-value" style="color:#4caf50">$${expectedValueMonth.toFixed(2)}</div><div class="calc-sub">30 días</div></div>
-                <div class="calc-result-card"><h4>Valor esperado/año</h4><div class="calc-value" style="color:#4caf50">$${expectedValueYear.toFixed(2)}</div><div class="calc-sub">365 días</div></div>
+                <div class="calc-result-card"><h4>Valor esperado/año</h4><div class="calc-value" style="color:#4caf50">$${(expectedValueDay*365).toFixed(2)}</div><div class="calc-sub">365 días</div></div>
                 <div class="calc-result-card"><h4>Tu progreso actual</h4><div class="calc-value" style="color:#e91e63">${progress}%</div><div class="calc-sub">Best share: ${formatNum(Math.round(bestshare))}</div></div>
             `;
 
-            // Comparison table BTC vs BCH
-            const btcProbDay = (hashrateHS * 86400) / (BTC_DIFF * Math.pow(2, 32));
-            const bchProbDay = (hashrateHS * 86400) / (BCH_DIFF * Math.pow(2, 32));
-            const btcEV = btcProbDay * BTC_REWARD * BTC_PRICE;
-            const bchEV = bchProbDay * BCH_REWARD * BCH_PRICE;
-            const winner = btcEV > bchEV ? 'btc' : 'bch';
+            // Comparison table all chains
+            let bestEV = -1, bestChain = '';
+            const rows = Object.entries(CHAINS).map(([key, ch]) => {
+                const prob = (hashrateHS * 86400) / (ch.diff * Math.pow(2, 32));
+                const ev = prob * ch.reward * ch.price;
+                if (ev > bestEV) { bestEV = ev; bestChain = key; }
+                return { key, ...ch, prob, ev, daysPerBlock: 1/prob };
+            });
+            rows.sort((a,b) => b.ev - a.ev);
 
-            document.getElementById('calcComparison').innerHTML = `
-                <h4>📊 Comparativa BTC vs BCH con ${hashrateTH} TH/s</h4>
-                <table>
-                    <tr><th>Métrica</th><th>₿ BTC</th><th>🅱️ BCH</th></tr>
-                    <tr><td>Dificultad red</td><td>${formatNum(Math.round(BTC_DIFF))}</td><td>${formatNum(Math.round(BCH_DIFF))}</td></tr>
-                    <tr><td>Probabilidad/día</td><td>1 entre ${formatNum(Math.round(1/btcProbDay))}</td><td>1 entre ${formatNum(Math.round(1/bchProbDay))}</td></tr>
-                    <tr><td>Tiempo estimado/bloque</td><td>${formatTime((1/btcProbDay)*86400)}</td><td>${formatTime((1/bchProbDay)*86400)}</td></tr>
-                    <tr><td>Recompensa</td><td>${BTC_REWARD} BTC ($${formatNum(Math.round(BTC_REWARD*BTC_PRICE))})</td><td>${BCH_REWARD} BCH ($${formatNum(Math.round(BCH_REWARD*BCH_PRICE))})</td></tr>
-                    <tr><td>Valor esperado/día</td><td class="${winner==='btc'?'calc-winner':''}">$${btcEV.toFixed(4)}</td><td class="${winner==='bch'?'calc-winner':''}">$${bchEV.toFixed(4)}</td></tr>
-                    <tr><td>Valor esperado/año</td><td class="${winner==='btc'?'calc-winner':''}">$${(btcEV*365).toFixed(2)}</td><td class="${winner==='bch'?'calc-winner':''}">$${(bchEV*365).toFixed(2)}</td></tr>
-                    <tr><td>¿Cuál renta más?</td><td class="${winner==='btc'?'calc-winner':''}">${winner==='btc'?'✅ SÍ':'❌'}</td><td class="${winner==='bch'?'calc-winner':''}">${winner==='bch'?'✅ SÍ':'❌'}</td></tr>
-                </table>
-            `;
+            let tableHTML = `<h4>📊 Comparativa SHA-256 con ${hashrateTH} TH/s — ${rows.length} chains</h4><table><tr><th>Métrica</th>`;
+            rows.forEach(r => { tableHTML += `<th>${r.emoji} ${r.name}</th>`; });
+            tableHTML += `</tr>`;
+
+            const metrics = [
+                { label: 'Dificultad', fn: r => formatNum(Math.round(r.diff)) },
+                { label: 'Probabilidad/día', fn: r => `1 entre ${formatNum(Math.round(1/r.prob))}` },
+                { label: 'Tiempo/bloque', fn: r => formatTime(r.daysPerBlock * 86400) },
+                { label: 'Recompensa', fn: r => `${formatNum(r.reward)} ${r.name}` },
+                { label: 'Valor bloque', fn: r => `$${formatNum(Math.round(r.reward * r.price))}` },
+                { label: 'Valor esperado/día', fn: r => `$${r.ev.toFixed(4)}`, highlight: true },
+                { label: 'Valor esperado/año', fn: r => `$${(r.ev*365).toFixed(2)}`, highlight: true },
+                { label: '¿Renta más?', fn: r => r.key === bestChain ? '✅ SÍ' : '❌', highlight: true }
+            ];
+
+            metrics.forEach(m => {
+                tableHTML += `<tr><td>${m.label}</td>`;
+                rows.forEach(r => {
+                    const val = m.fn(r);
+                    const cls = m.highlight && r.key === bestChain ? 'calc-winner' : '';
+                    tableHTML += `<td class="${cls}">${val}</td>`;
+                });
+                tableHTML += `</tr>`;
+            });
+            tableHTML += `</table>`;
+            document.getElementById('calcComparison').innerHTML = tableHTML;
         }
 
         function showWorkerDetail(i) {
@@ -378,15 +384,15 @@
                 const totalHR = parseHR(data.hashrate1m) / 1e12;
                 if (totalHR > 0) document.getElementById('calcHashrate').value = totalHR.toFixed(1);
 
-                const blockFound = checkBlockFound(parseFloat(data.bestshare||0), BTC_DIFF, 'BTC');
-                const progress = data.bestshare ? (parseFloat(data.bestshare) / BTC_DIFF * 100).toFixed(6) : 0;
+                const blockFound = checkBlockFound(parseFloat(data.bestshare||0), CHAINS.btc.diff, 'BTC');
+                const progress = data.bestshare ? (parseFloat(data.bestshare) / CHAINS.btc.diff * 100).toFixed(6) : 0;
                 document.getElementById('blockProgress').textContent = `Progreso bloque: ${progress}%`;
 
                 const tbody = document.getElementById('workersBody');
                 tbody.innerHTML = '';
                 (data.worker||[]).forEach((w,i) => {
-                    const wBlockFound = parseFloat(w.bestshare||0) >= BTC_DIFF;
-                    const wProgress = w.bestshare ? (parseFloat(w.bestshare) / BTC_DIFF * 100).toFixed(4) : 0;
+                    const wBlockFound = parseFloat(w.bestshare||0) >= CHAINS.btc.diff;
+                    const wProgress = w.bestshare ? (parseFloat(w.bestshare) / CHAINS.btc.diff * 100).toFixed(4) : 0;
                     const tr = document.createElement('tr');
                     tr.className = 'worker-row';
                     tr.onclick = () => showWorkerDetail(i);
