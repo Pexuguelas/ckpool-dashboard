@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-ckpool Mining Dashboard - Proxy Server
-Serves static files and proxies API requests to ckpool stats API.
-Configure your wallet address below or via environment variable.
+ckpool Mining Dashboard - Servidor Proxy
+Sirve los ficheros estáticos y hace de proxy hacia la API de ckpool.
+Configura tu dirección de wallet abajo o mediante variable de entorno.
 """
 from http.server import HTTPServer, SimpleHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import urlparse, parse_qs
@@ -10,8 +10,8 @@ import urllib.request
 import json
 import os
 
-# === CONFIGURATION ===
-# Set your Bitcoin wallet address here, or use env var CKPOOL_WALLET
+# === CONFIGURACIÓN ===
+# Pon aquí tu dirección de wallet de Bitcoin, o usa la variable de entorno CKPOOL_WALLET
 WALLET_ADDRESS = os.environ.get('CKPOOL_WALLET', 'YOUR_WALLET_ADDRESS')
 # ======================
 
@@ -27,7 +27,7 @@ class MiningHandler(SimpleHTTPRequestHandler):
 
         if parsed.path.startswith('/api/stats'):
             try:
-                # Allow overriding wallet via query param: /api/stats?wallet=1xxx
+                # Permite sobreescribir la wallet mediante query param: /api/stats?wallet=1xxx
                 params = parse_qs(parsed.query)
                 wallet = params.get('wallet', [WALLET_ADDRESS])[0]
 
@@ -36,7 +36,7 @@ class MiningHandler(SimpleHTTPRequestHandler):
                     self.send_header('Content-Type', 'application/json')
                     self.send_header('Access-Control-Allow-Origin', '*')
                     self.end_headers()
-                    self.wfile.write(json.dumps({'error': 'No wallet address configured. Set CKPOOL_WALLET env var or pass ?wallet= param.'}).encode())
+                    self.wfile.write(json.dumps({'error': 'No hay wallet configurada. Usa la variable CKPOOL_WALLET o el parámetro ?wallet=.'}).encode())
                     return
 
                 url = f'https://raw.stats.ckpool.org/users/{wallet}'
@@ -78,17 +78,17 @@ if __name__ == '__main__':
         WALLET_ADDRESS = sys.argv[1]
 
     if WALLET_ADDRESS == 'YOUR_WALLET_ADDRESS':
-        print('⚠️  No wallet address configured!')
-        print('   Usage: python3 server.py <wallet_address>')
-        print('   Or:    CKPOOL_WALLET=1xxx... python3 server.py')
-        print('   Or:    Set WALLET_ADDRESS in server.py')
-        print(f'\n   Dashboard will still run on :{port} but you must enter wallet in the UI.')
+        print('⚠️  No hay wallet configurada!')
+        print('   Uso: python3 server.py <direccion_wallet>')
+        print('   O:   CKPOOL_WALLET=1xxx... python3 server.py')
+        print('   O:   Cambia WALLET_ADDRESS en server.py')
+        print(f'\n   El dashboard funcionará en :{port} pero debes introducir la wallet en la interfaz.')
     else:
-        print(f'✅ Mining dashboard for {WALLET_ADDRESS} running on :{port}')
+        print(f'✅ Dashboard de minero para {WALLET_ADDRESS} funcionando en :{port}')
 
     server = ThreadingHTTPServer(('0.0.0.0', port), MiningHandler)
     try:
         server.serve_forever()
     except KeyboardInterrupt:
-        print('\nStopping...')
+        print('\nDeteniendo...')
         server.shutdown()
