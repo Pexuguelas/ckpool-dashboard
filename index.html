@@ -226,34 +226,18 @@
         // Difficulty and price data (updated from APIs)
         let CHAINS = {
             btc: { name: 'BTC', emoji: '₿', diff: 1.348238373e14, price: 60688, reward: 3.125, color: '#f0a500', web: 'https://bitcoin.org', desc: 'Bitcoin — la primera y mayor cryptocurrency', pools: [
-                { name: 'solo.ckpool.org', url: 'https://solo.ckpool.org', stratums: [
-                    { label: 'SV1', stratum: 'stratum.ckpool.org:3333', fee: '2%' },
-                    { label: 'SV2', stratum: 'stratum.ckpool.org:3336', fee: '2%' },
-                    { label: 'Europa', stratum: 'eusolo.ckpool.org:3333', fee: '2%' }
-                ]}
+                { name: 'solo.ckpool.org', url: 'https://solo.ckpool.org' }
             ] },
             bch: { name: 'BCH', emoji: '🅱️', diff: 4.99244753561e11, price: 197.52, reward: 6.25, color: '#4caf50', web: 'https://bch.info', desc: 'Bitcoin Cash — fork de Bitcoin con bloques más grandes', pools: [
-                { name: 'solo.ckpool BCH', url: 'https://solo.ckpool.org', stratums: [
-                    { label: 'SV1', stratum: 'stratum.bcckpool.com:3333', fee: '2%' }
-                ]},
-                { name: 'Mining Dutch BCH', url: 'https://www.mining-dutch.nl/pools/bitcoincashnode.php', stratums: [
-                    { label: 'Europa', stratum: 'europe.mining-dutch.nl:3406', fee: '0.50% solo' }
-                ]}
+                { name: 'solo.ckpool BCH', url: 'https://solo.ckpool.org' },
+                { name: 'Mining Dutch BCH', url: 'https://www.mining-dutch.nl/pools/bitcoincashnode.php' }
             ] },
             bsv: { name: 'BSV', emoji: '🔄', diff: 7.1e10, price: 13.97, reward: 6.25, color: '#6e9eff', web: 'https://bitcoinsv.com', desc: 'Bitcoin SV — fork de BCH enfocado en escalabilidad on-chain', pools: [
-                { name: 'Mining Dutch BSV', url: 'https://www.mining-dutch.nl/pools/bitcoinsv.php', stratums: [
-                    { label: 'Europa', stratum: 'europe.mining-dutch.nl:3433', fee: '0.50% solo' },
-                    { label: 'Américas', stratum: 'americas.mining-dutch.nl:3433', fee: '0.50% solo' },
-                    { label: 'Asia', stratum: 'asia.mining-dutch.nl:3433', fee: '0.50% solo' }
-                ]}
+                { name: 'Mining Dutch BSV', url: 'https://www.mining-dutch.nl/pools/bitcoinsv.php' }
             ] },
             xec: { name: 'XEC', emoji: '⚡', diff: 6.135868195e9, price: 0.00000504, reward: 12500000, color: '#e91e63', web: 'https://e.cash', desc: 'eCash (XEC) — fork de BCH con re-denominación, dificultad muy baja. Merged mining gratis', pools: [
-                { name: 'Mining Dutch XEC', url: 'https://www.mining-dutch.nl/pools/ecash.php', stratums: [
-                    { label: 'Europa', stratum: 'europe.mining-dutch.nl:3407', fee: '0.50% solo' },
-                    { label: 'Américas', stratum: 'americas.mining-dutch.nl:3407', fee: '0.50% solo' },
-                    { label: 'Asia', stratum: 'asia.mining-dutch.nl:3407', fee: '0.50% solo' }
-                ]},
-                { name: 'eCash Mining (más pools)', url: 'https://e.cash/mining', stratums: [] }
+                { name: 'Mining Dutch XEC', url: 'https://www.mining-dutch.nl/pools/ecash.php' },
+                { name: 'eCash Mining (más pools)', url: 'https://e.cash/mining' }
             ] }
         };
 
@@ -312,10 +296,7 @@
                 <div class="calc-result-card"><h4>Valor esperado/día</h4><div class="calc-value" style="color:#4caf50">$${expectedValueDay.toFixed(4)}</div><div class="calc-sub">Probabilidad × recompensa</div></div>
                 <div class="calc-result-card"><h4>Valor esperado/año</h4><div class="calc-value" style="color:#4caf50">$${(expectedValueDay*365).toFixed(2)}</div><div class="calc-sub">365 días</div></div>
                 <div class="calc-result-card"><h4>Tu progreso actual</h4><div class="calc-value" style="color:#e91e63">${progress}%</div><div class="calc-sub">Best share: ${formatNum(Math.round(bestshare))}</div></div>
-                <div class="calc-result-card" style="grid-column:1/-1"><h4>⛏️ Pools recomendadas para ${c.name}</h4><div style="margin-top:8px">${c.pools.map(p => {
-                    const stratumList = p.stratums.length > 0 ? p.stratums.map(s => `<div style="padding:4px 0 4px 12px;border-left:2px solid ${c.color}33;margin:4px 0"><span style="color:#888;font-size:0.8em">${s.label}:</span> <span style="color:#aaa;font-family:monospace;font-size:0.85em">${s.stratum}</span> <span style="color:#555;font-size:0.75em">(${s.fee})</span></div>`).join('') : '<div style="color:#555;font-size:0.8em;padding:4px 0 4px 12px">Ver pools en la web oficial</div>';
-                    return `<div style="padding:10px 0;border-bottom:1px solid #1a1a1a"><div style="display:flex;justify-content:space-between;align-items:center"><a href="${p.url}" target="_blank" style="color:${c.color};text-decoration:underline;font-weight:bold">${p.name}</a></div><div style="margin-top:6px">${stratumList}</div></div>`;
-                }).join('')}</div></div>
+                <div class="calc-result-card" style="grid-column:1/-1"><h4>⛏️ Pools recomendadas para ${c.name}</h4><div style="margin-top:8px;display:flex;flex-direction:column;gap:8px">${c.pools.map(p => `<a href="${p.url}" target="_blank" style="display:block;padding:10px 14px;background:#0a0a0a;border:1px solid #222;border-radius:8px;color:${c.color};text-decoration:none;font-weight:bold;text-align:center">${p.name}</a>`).join('')}</div></div>
             `;
 
             // Comparison table all chains
