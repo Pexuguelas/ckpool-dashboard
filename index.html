@@ -123,6 +123,8 @@
         <h2>🎉 ¡BLOQUE ENCONTRADO!</h2>
         <p id="blockAlertText">¡Felicidades! Has minado un bloque.</p>
         <div class="block-chain" id="blockAlertChain"></div>
+        <div id="blockAlertWorker" style="color:#f0a500;margin-top:8px;font-size:1.1em"></div>
+        <div id="blockAlertHeight" style="color:#888;margin-top:4px;font-size:0.9em"></div>
     </div>
 
     <div id="overview">
@@ -227,12 +229,27 @@
             return (seconds/86400/365).toFixed(1) + ' años';
         }
 
-        function checkBlockFound(bestshare, networkDiff, chain) {
+        let blockFoundWorkers = [];
+
+        function checkBlockFound(bestshare, networkDiff, chain, workerName) {
             if (bestshare && networkDiff && bestshare >= networkDiff) {
                 const alert = document.getElementById('blockAlert');
                 alert.classList.add('visible');
                 document.getElementById('blockAlertText').textContent = `Share: ${formatNum(Math.round(bestshare))} · Dificultad red: ${formatNum(Math.round(networkDiff))}`;
                 document.getElementById('blockAlertChain').textContent = chain;
+                if (workerName) {
+                    document.getElementById('blockAlertWorker').textContent = `⛏️ Minero: ${workerName}`;
+                    blockFoundWorkers.push(workerName);
+                } else if (blockFoundWorkers.length > 0) {
+                    document.getElementById('blockAlertWorker').textContent = `⛏️ Minero: ${blockFoundWorkers.join(', ')}`;
+                }
+                // Consultar altura actual del bloque
+                fetch('https://blockchain.info/q/getblockcount')
+                    .then(r => r.text())
+                    .then(height => {
+                        document.getElementById('blockAlertHeight').textContent = `Altura aprox. del bloque: #${height.trim()}`;
+                    })
+                    .catch(() => {});
                 return true;
             }
             return false;
@@ -305,7 +322,7 @@
             document.getElementById('overview').style.display='none'; document.getElementById('workerDetail').style.display='block';
             document.getElementById('wdTitle').textContent = '🔧 ' + name;
             const online = parseHR(w.hashrate1m) > 0;
-            const blockFound = checkBlockFound(parseFloat(w.bestshare), CHAINS.btc.diff, 'BTC');
+            const blockFound = checkBlockFound(parseFloat(w.bestshare), CHAINS.btc.diff, 'BTC', name);
             const progress = w.bestshare ? (parseFloat(w.bestshare) / CHAINS.btc.diff * 100).toFixed(6) : 0;
             document.getElementById('wdGrid').innerHTML = `
                 <div class="wd-card"><h4>Estado</h4><div class="wd-value" style="color:${online?'#4caf50':'#f44336'}">${online?'🟢 Online':'🔴 Offline'}</div></div>
