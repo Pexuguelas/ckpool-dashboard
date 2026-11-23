@@ -305,8 +305,8 @@
             document.getElementById('overview').style.display='none'; document.getElementById('workerDetail').style.display='block';
             document.getElementById('wdTitle').textContent = '🔧 ' + name;
             const online = parseHR(w.hashrate1m) > 0;
-            const blockFound = checkBlockFound(parseFloat(w.bestshare), BTC_DIFF, 'BTC');
-            const progress = w.bestshare ? (parseFloat(w.bestshare) / BTC_DIFF * 100).toFixed(6) : 0;
+            const blockFound = checkBlockFound(parseFloat(w.bestshare), CHAINS.btc.diff, 'BTC');
+            const progress = w.bestshare ? (parseFloat(w.bestshare) / CHAINS.btc.diff * 100).toFixed(6) : 0;
             document.getElementById('wdGrid').innerHTML = `
                 <div class="wd-card"><h4>Estado</h4><div class="wd-value" style="color:${online?'#4caf50':'#f44336'}">${online?'🟢 Online':'🔴 Offline'}</div></div>
                 <div class="wd-card"><h4>HR 1m</h4><div class="wd-value hashrate-color">${w.hashrate1m||'0'}</div></div>
