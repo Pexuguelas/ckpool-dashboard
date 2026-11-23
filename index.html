@@ -143,7 +143,7 @@
         <div class="workers-table">
             <h3>🔧 Detalle por Worker — click en un worker para ver stats individuales</h3>
             <table>
-                <thead><tr><th>Worker</th><th>HR 1m</th><th>HR 5m</th><th>HR 1h</th><th>HR 1d</th><th>HR 7d</th><th>Shares</th><th>Best Share</th><th>Bloque</th></tr></thead>
+                <thead><tr><th>Worker</th><th>HR 1m</th><th>HR 5m</th><th>HR 1h</th><th>HR 1d</th><th>HR 7d</th><th>Shares</th><th>Best Share</th><th>Prob/día</th><th>Bloque</th></tr></thead>
                 <tbody id="workersBody"></tbody>
             </table>
         </div>
@@ -366,10 +366,13 @@
                 (data.worker||[]).forEach((w,i) => {
                     const wBlockFound = parseFloat(w.bestshare||0) >= CHAINS.btc.diff;
                     const wProgress = w.bestshare ? (parseFloat(w.bestshare) / CHAINS.btc.diff * 100).toFixed(4) : 0;
+                    const wHashrateHS = parseHR(w.hashrate1m);
+                    const wProbDay = wHashrateHS > 0 ? (wHashrateHS * 86400) / (CHAINS.btc.diff * Math.pow(2, 32)) : 0;
+                    const wProbText = wProbDay > 0 ? `1 entre ${formatNum(Math.round(1/wProbDay))}` : '—';
                     const tr = document.createElement('tr');
                     tr.className = 'worker-row';
                     tr.onclick = () => showWorkerDetail(i);
-                    tr.innerHTML = `<td class="worker-name">${shortName(w.workername)}</td><td>${w.hashrate1m||'0'}</td><td>${w.hashrate5m||'0'}</td><td>${w.hashrate1hr||'0'}</td><td>${w.hashrate1d||'0'}</td><td>${w.hashrate7d||'0'}</td><td>${formatNum(w.shares)}</td><td>${formatNum(Math.round(parseFloat(w.bestshare||0)))}</td><td style="color:${wBlockFound?'#4caf50':'#555'}">${wBlockFound?'🎉 SÍ':wProgress+'%'}</td>`;
+                    tr.innerHTML = `<td class="worker-name">${shortName(w.workername)}</td><td>${w.hashrate1m||'0'}</td><td>${w.hashrate5m||'0'}</td><td>${w.hashrate1hr||'0'}</td><td>${w.hashrate1d||'0'}</td><td>${w.hashrate7d||'0'}</td><td>${formatNum(w.shares)}</td><td>${formatNum(Math.round(parseFloat(w.bestshare||0)))}</td><td style="color:#6e9eff;font-size:0.85em">${wProbText}</td><td style="color:${wBlockFound?'#4caf50':'#555'}">${wBlockFound?'🎉 SÍ':wProgress+'%'}</td>`;
                     tbody.appendChild(tr);
                 });
                 updateChart(data);
