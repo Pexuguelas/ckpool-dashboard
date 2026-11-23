@@ -258,7 +258,6 @@
                 <div class="calc-result-card"><h4>Recompensa bloque</h4><div class="calc-value" style="color:${c.color}">${formatNum(c.reward)} ${c.name}</div><div class="calc-sub">≈ $${formatNum(Math.round(blockValueUSD))}</div></div>
                 <div class="calc-result-card"><h4>Valor esperado/día</h4><div class="calc-value" style="color:#4caf50">$${expectedValueDay.toFixed(4)}</div><div class="calc-sub">Probabilidad × recompensa</div></div>
                 <div class="calc-result-card"><h4>Valor esperado/año</h4><div class="calc-value" style="color:#4caf50">$${(expectedValueDay*365).toFixed(2)}</div><div class="calc-sub">365 días</div></div>
-                <div class="calc-result-card"><h4>Tu progreso actual</h4><div class="calc-value" style="color:#e91e63">${progress}%</div><div class="calc-sub">Best share: ${formatNum(Math.round(bestshare))}</div></div>
                 <div class="calc-result-card" style="grid-column:1/-1"><h4>⛏️ Pools recomendadas para ${c.name}</h4><div style="margin-top:8px;display:flex;flex-direction:column;gap:8px">${c.pools.map(p => `<a href="${p.url}" target="_blank" style="display:block;padding:10px 14px;background:#0a0a0a;border:1px solid #222;border-radius:8px;color:${c.color};text-decoration:none;font-weight:bold;text-align:center">${p.name}</a>`).join('')}</div></div>
             `;
 
