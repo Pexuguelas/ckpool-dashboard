@@ -1,0 +1,772 @@
+[
+  {
+    "height": 977057,
+    "date": "2026-11-22T12:54:23",
+    "worker": "Solo CK",
+    "hash": "0000000000000000000155b086738584dc797ef4993633b525b1040c367a92de",
+    "url": "https://mempool.space/block/0000000000000000000155b086738584dc797ef4993633b525b1040c367a92de"
+  },
+  {
+    "height": 976642,
+    "date": "2026-11-19T22:04:57",
+    "worker": "Solo CK",
+    "hash": "00000000000000000001eedae93603771cea17824597b42f368f563d5305dc31",
+    "url": "https://mempool.space/block/00000000000000000001eedae93603771cea17824597b42f368f563d5305dc31"
+  },
+  {
+    "height": 975427,
+    "date": "2026-11-11T11:08:00",
+    "worker": "Solo CK",
+    "hash": "00000000000000000000bc99d243029a18c26b2eaac0f76e2c4c4b6de04721a5",
+    "url": "https://mempool.space/block/00000000000000000000bc99d243029a18c26b2eaac0f76e2c4c4b6de04721a5"
+  },
+  {
+    "height": 974930,
+    "date": "2026-11-07T11:41:44",
+    "worker": "Solo CK",
+    "hash": "00000000000000000000642ee55c6672864ce72cb64e30c7e4361845c7d453e4",
+    "url": "https://mempool.space/block/00000000000000000000642ee55c6672864ce72cb64e30c7e4361845c7d453e4"
+  },
+  {
+    "height": 974893,
+    "date": "2026-11-07T04:51:44",
+    "worker": "Solo CK",
+    "hash": "000000000000000000003641942421abb6660594dc8ab8c268bebb2ef4f505a1",
+    "url": "https://mempool.space/block/000000000000000000003641942421abb6660594dc8ab8c268bebb2ef4f505a1"
+  },
+  {
+    "height": 973413,
+    "date": "2026-10-27T15:11:56",
+    "worker": "Solo CK",
+    "hash": "00000000000000000001b6d3ff91f983eef84b14ad428c60fbf0722b5215f360",
+    "url": "https://mempool.space/block/00000000000000000001b6d3ff91f983eef84b14ad428c60fbf0722b5215f360"
+  },
+  {
+    "height": 973262,
+    "date": "2026-10-26T17:06:00",
+    "worker": "FutureBit Apollo Solo",
+    "hash": "00000000000000000001e7da28fd249de38ba0a36f326ac447d933eef9ea630c",
+    "url": "https://mempool.space/block/00000000000000000001e7da28fd249de38ba0a36f326ac447d933eef9ea630c"
+  },
+  {
+    "height": 970904,
+    "date": "2026-10-11T09:58:22",
+    "worker": "Braiins Solo",
+    "hash": "000000000000000000016d3757f864a84f128ba95e5bb883904546a4ecb1c862",
+    "url": "https://mempool.space/block/000000000000000000016d3757f864a84f128ba95e5bb883904546a4ecb1c862"
+  },
+  {
+    "height": 966351,
+    "date": "2026-09-10T11:06:46",
+    "worker": "Braiins Solo",
+    "hash": "000000000000000000014efb268b516c0f0dbbf7d45c1e3edbca9262f816b2ac",
+    "url": "https://mempool.space/block/000000000000000000014efb268b516c0f0dbbf7d45c1e3edbca9262f816b2ac"
+  },
+  {
+    "height": 960804,
+    "date": "2026-08-03T02:11:00",
+    "worker": "Solo CK",
+    "hash": "0000000000000000000081c26d870f8ac4a0217b8c6dab7b63c25f03b3882c52",
+    "url": "https://mempool.space/block/0000000000000000000081c26d870f8ac4a0217b8c6dab7b63c25f03b3882c52"
+  },
+  {
+    "height": 959115,
+    "date": "2026-07-22T09:06:37",
+    "worker": "Solo CK",
+    "hash": "0000000000000000000146c469ee9ebff4e4e3e075de978d25846005e5860e75",
+    "url": "https://mempool.space/block/0000000000000000000146c469ee9ebff4e4e3e075de978d25846005e5860e75"
+  },
+  {
+    "height": 955703,
+    "date": "2026-06-27T19:16:56",
+    "worker": "Solo CK",
+    "hash": "00000000000000000001089806eb0365ac250e44bc0b306ba0339a6b63c63fc5",
+    "url": "https://mempool.space/block/00000000000000000001089806eb0365ac250e44bc0b306ba0339a6b63c63fc5"
+  },
+  {
+    "height": 951771,
+    "date": "2026-05-31T00:27:23",
+    "worker": "Braiins Solo",
+    "hash": "000000000000000000009a0be2e83d853f62fbc0e657c78780b1e96d62773ab6",
+    "url": "https://mempool.space/block/000000000000000000009a0be2e83d853f62fbc0e657c78780b1e96d62773ab6"
+  },
+  {
+    "height": 951408,
+    "date": "2026-05-28T11:37:01",
+    "worker": "Solo CK",
+    "hash": "00000000000000000000c63fa7d726a1840c777a59ebc73f45a298989f78548a",
+    "url": "https://mempool.space/block/00000000000000000000c63fa7d726a1840c777a59ebc73f45a298989f78548a"
+  },
+  {
+    "height": 947128,
+    "date": "2026-04-29T09:28:16",
+    "worker": "Braiins Solo",
+    "hash": "0000000000000000000077bd95487d4eac60772e2c762269a465c8d9c59d7f7e",
+    "url": "https://mempool.space/block/0000000000000000000077bd95487d4eac60772e2c762269a465c8d9c59d7f7e"
+  },
+  {
+    "height": 944306,
+    "date": "2026-04-09T06:46:22",
+    "worker": "Solo CK",
+    "hash": "000000000000000000012d5e7b4745f92b9cd60241854e38be68d9b182feabcb",
+    "url": "https://mempool.space/block/000000000000000000012d5e7b4745f92b9cd60241854e38be68d9b182feabcb"
+  },
+  {
+    "height": 943411,
+    "date": "2026-04-02T21:02:41",
+    "worker": "Solo CK",
+    "hash": "00000000000000000000bef7f0870c24f2962cf83949e96c7288cf30f0d74bf0",
+    "url": "https://mempool.space/block/00000000000000000000bef7f0870c24f2962cf83949e96c7288cf30f0d74bf0"
+  },
+  {
+    "height": 938092,
+    "date": "2026-02-24T08:04:22",
+    "worker": "Braiins Solo",
+    "hash": "00000000000000000000e1f01fafaa224e2fcdc790f07f558da00a2b95b90e4d",
+    "url": "https://mempool.space/block/00000000000000000000e1f01fafaa224e2fcdc790f07f558da00a2b95b90e4d"
+  },
+  {
+    "height": 928956,
+    "date": "2025-12-22T09:10:43",
+    "worker": "SoloPool.com",
+    "hash": "000000000000000000004e6a487a9989c37ecf606b5d0427966cef77ed3593bc",
+    "url": "https://mempool.space/block/000000000000000000004e6a487a9989c37ecf606b5d0427966cef77ed3593bc"
+  },
+  {
+    "height": 927474,
+    "date": "2025-12-11T20:22:33",
+    "worker": "Solo CK",
+    "hash": "000000000000000000001ac9929c4d1aa62610efe8dd18837fdf445b3c47f5cf",
+    "url": "https://mempool.space/block/000000000000000000001ac9929c4d1aa62610efe8dd18837fdf445b3c47f5cf"
+  },
+  {
+    "height": 925758,
+    "date": "2025-11-29T22:11:02",
+    "worker": "Solo CK",
+    "hash": "0000000000000000000128b8e814ce04f8b9b61ef4485023028afebfcf6bb4a8",
+    "url": "https://mempool.space/block/0000000000000000000128b8e814ce04f8b9b61ef4485023028afebfcf6bb4a8"
+  },
+  {
+    "height": 925380,
+    "date": "2025-11-27T07:19:50",
+    "worker": "Solo CK",
+    "hash": "00000000000000000000a8e30a009cd15c7c8ee207cfc352eac02e653e182ba5",
+    "url": "https://mempool.space/block/00000000000000000000a8e30a009cd15c7c8ee207cfc352eac02e653e182ba5"
+  },
+  {
+    "height": 924569,
+    "date": "2025-11-21T14:13:06",
+    "worker": "Solo CK",
+    "hash": "00000000000000000001457a4acc5da8e886dddd0a79a6899957a502e0a1977b",
+    "url": "https://mempool.space/block/00000000000000000001457a4acc5da8e886dddd0a79a6899957a502e0a1977b"
+  },
+  {
+    "height": 913593,
+    "date": "2025-09-07T14:35:18",
+    "worker": "Solo CK",
+    "hash": "0000000000000000000180aab2a364d0baeddacf4048d0600065390a81651829",
+    "url": "https://mempool.space/block/0000000000000000000180aab2a364d0baeddacf4048d0600065390a81651829"
+  },
+  {
+    "height": 912632,
+    "date": "2025-09-01T02:48:27",
+    "worker": "Solo CK",
+    "hash": "00000000000000000000978f2aa548b12b9fe7da9e2809d25f2d40ddfb63c1ae",
+    "url": "https://mempool.space/block/00000000000000000000978f2aa548b12b9fe7da9e2809d25f2d40ddfb63c1ae"
+  },
+  {
+    "height": 910440,
+    "date": "2025-08-17T10:19:29",
+    "worker": "Solo CK",
+    "hash": "00000000000000000000d22167aa0c9d1a49e7878631d6c93ea1b1c87b98ba24",
+    "url": "https://mempool.space/block/00000000000000000000d22167aa0c9d1a49e7878631d6c93ea1b1c87b98ba24"
+  },
+  {
+    "height": 907465,
+    "date": "2025-07-27T21:43:51",
+    "worker": "Solo CK",
+    "hash": "00000000000000000001e6a5aec8788183793b27370ef638b152b4d02f9f0787",
+    "url": "https://mempool.space/block/00000000000000000001e6a5aec8788183793b27370ef638b152b4d02f9f0787"
+  },
+  {
+    "height": 907283,
+    "date": "2025-07-26T14:15:56",
+    "worker": "Solo CK",
+    "hash": "000000000000000000012b46e1a7ce322e850afde12422c440ee19d9c1b6d74a",
+    "url": "https://mempool.space/block/000000000000000000012b46e1a7ce322e850afde12422c440ee19d9c1b6d74a"
+  },
+  {
+    "height": 904989,
+    "date": "2025-07-10T23:23:34",
+    "worker": "Solo CK",
+    "hash": "0000000000000000000161bc7461e9736bcda0f28458bd75265019864961aefb",
+    "url": "https://mempool.space/block/0000000000000000000161bc7461e9736bcda0f28458bd75265019864961aefb"
+  },
+  {
+    "height": 903883,
+    "date": "2025-07-03T21:37:16",
+    "worker": "Solo CK",
+    "hash": "000000000000000000004c918a929cb2710b5376dcdd89e719c521dc5255115c",
+    "url": "https://mempool.space/block/000000000000000000004c918a929cb2710b5376dcdd89e719c521dc5255115c"
+  },
+  {
+    "height": 899826,
+    "date": "2025-06-04T23:18:18",
+    "worker": "Solo CK",
+    "hash": "000000000000000000020c5281e68cbf5b382e02e3a42d4a9d2965b08d1f8bb3",
+    "url": "https://mempool.space/block/000000000000000000020c5281e68cbf5b382e02e3a42d4a9d2965b08d1f8bb3"
+  },
+  {
+    "height": 891952,
+    "date": "2025-04-11T17:16:28",
+    "worker": "Solo CK",
+    "hash": "000000000000000000003d9a1a59f93a992c0858d3d15627a87fe5649b76563e",
+    "url": "https://mempool.space/block/000000000000000000003d9a1a59f93a992c0858d3d15627a87fe5649b76563e"
+  },
+  {
+    "height": 889975,
+    "date": "2025-03-29T13:12:09",
+    "worker": "Solo CK",
+    "hash": "000000000000000000005afed55b551d961220653a05daa8f362de2a384d8cea",
+    "url": "https://mempool.space/block/000000000000000000005afed55b551d961220653a05daa8f362de2a384d8cea"
+  },
+  {
+    "height": 888737,
+    "date": "2025-03-21T08:31:43",
+    "worker": "FutureBit Apollo Solo",
+    "hash": "00000000000000000000b7070e88525e4064ab36df7cfbe34d785bbc6eb491ea",
+    "url": "https://mempool.space/block/00000000000000000000b7070e88525e4064ab36df7cfbe34d785bbc6eb491ea"
+  },
+  {
+    "height": 887212,
+    "date": "2025-03-10T19:22:04",
+    "worker": "Solo CK",
+    "hash": "000000000000000000006414aea39be567cf1d5ff6cbf2d77254fe7c714b0d81",
+    "url": "https://mempool.space/block/000000000000000000006414aea39be567cf1d5ff6cbf2d77254fe7c714b0d81"
+  },
+  {
+    "height": 881676,
+    "date": "2025-01-31T19:40:16",
+    "worker": "Solo CK",
+    "hash": "000000000000000000022247ce3898fc9e10be0161cde5f369293d7a916ca8b3",
+    "url": "https://mempool.space/block/000000000000000000022247ce3898fc9e10be0161cde5f369293d7a916ca8b3"
+  },
+  {
+    "height": 881423,
+    "date": "2025-01-30T00:01:45",
+    "worker": "FutureBit Apollo Solo",
+    "hash": "0000000000000000000269d52c24ea451225613aab095d90d771d4e29aa96cdd",
+    "url": "https://mempool.space/block/0000000000000000000269d52c24ea451225613aab095d90d771d4e29aa96cdd"
+  },
+  {
+    "height": 875750,
+    "date": "2024-12-21T16:15:27",
+    "worker": "Solo CK",
+    "hash": "000000000000000000008659827d9d3e3f98cb6428ce5149464b44125be5ce19",
+    "url": "https://mempool.space/block/000000000000000000008659827d9d3e3f98cb6428ce5149464b44125be5ce19"
+  },
+  {
+    "height": 871258,
+    "date": "2024-11-20T23:32:47",
+    "worker": "Solo CK",
+    "hash": "00000000000000000001725f53ea2fda1da5e4dfc321202137826953150b9bdf",
+    "url": "https://mempool.space/block/00000000000000000001725f53ea2fda1da5e4dfc321202137826953150b9bdf"
+  },
+  {
+    "height": 867760,
+    "date": "2024-10-28T11:55:47",
+    "worker": "FutureBit Apollo Solo",
+    "hash": "0000000000000000000182972ccbfabb41ec5c385540dcab2f48c75cf73a695f",
+    "url": "https://mempool.space/block/0000000000000000000182972ccbfabb41ec5c385540dcab2f48c75cf73a695f"
+  },
+  {
+    "height": 867118,
+    "date": "2024-10-24T09:18:17",
+    "worker": "Solo CK",
+    "hash": "00000000000000000000d8d5d589093811cf7ecf5aa7bd768d459e45e4682d3e",
+    "url": "https://mempool.space/block/00000000000000000000d8d5d589093811cf7ecf5aa7bd768d459e45e4682d3e"
+  },
+  {
+    "height": 860749,
+    "date": "2024-09-10T11:27:07",
+    "worker": "Solo CK",
+    "hash": "00000000000000000002bbf819cea419c9e3bb0d3f912fe32d655a1d2439a985",
+    "url": "https://mempool.space/block/00000000000000000002bbf819cea419c9e3bb0d3f912fe32d655a1d2439a985"
+  },
+  {
+    "height": 858978,
+    "date": "2024-08-29T16:21:58",
+    "worker": "Solo CK",
+    "hash": "000000000000000000016ccd32328638865256249e592246bfae8af4031dda01",
+    "url": "https://mempool.space/block/000000000000000000016ccd32328638865256249e592246bfae8af4031dda01"
+  },
+  {
+    "height": 853742,
+    "date": "2024-07-24T17:43:43",
+    "worker": "Solo CK",
+    "hash": "00000000000000000000f0235e50becc0b3bc91231e236f67736d64b1813704b",
+    "url": "https://mempool.space/block/00000000000000000000f0235e50becc0b3bc91231e236f67736d64b1813704b"
+  },
+  {
+    "height": 845735,
+    "date": "2024-05-30T03:07:55",
+    "worker": "Solo CK",
+    "hash": "000000000000000000025e7da31fc781c585f700675f344a03d7ccccdf448a31",
+    "url": "https://mempool.space/block/000000000000000000025e7da31fc781c585f700675f344a03d7ccccdf448a31"
+  },
+  {
+    "height": 844437,
+    "date": "2024-05-21T13:21:00",
+    "worker": "Solo CK",
+    "hash": "000000000000000000031e2ad4e86934e12bdc24577844238424cae749fa240f",
+    "url": "https://mempool.space/block/000000000000000000031e2ad4e86934e12bdc24577844238424cae749fa240f"
+  },
+  {
+    "height": 843726,
+    "date": "2024-05-16T16:35:14",
+    "worker": "Solo CK",
+    "hash": "00000000000000000001639d1a6ee7c437abd5f910714a9d3d2049d00d4dde1a",
+    "url": "https://mempool.space/block/00000000000000000001639d1a6ee7c437abd5f910714a9d3d2049d00d4dde1a"
+  },
+  {
+    "height": 843650,
+    "date": "2024-05-16T02:53:08",
+    "worker": "Solo CK",
+    "hash": "00000000000000000000301aac4b868611201f866d5532509508416b073a161b",
+    "url": "https://mempool.space/block/00000000000000000000301aac4b868611201f866d5532509508416b073a161b"
+  },
+  {
+    "height": 843587,
+    "date": "2024-05-15T16:53:41",
+    "worker": "Solo CK",
+    "hash": "0000000000000000000124be8d25c3a2a9e8025f346e217a166468618d286fc8",
+    "url": "https://mempool.space/block/0000000000000000000124be8d25c3a2a9e8025f346e217a166468618d286fc8"
+  },
+  {
+    "height": 843231,
+    "date": "2024-05-13T03:40:31",
+    "worker": "Solo CK",
+    "hash": "000000000000000000030566aa3a07755fe2effcf8d8e170a7f7a92added6b53",
+    "url": "https://mempool.space/block/000000000000000000030566aa3a07755fe2effcf8d8e170a7f7a92added6b53"
+  },
+  {
+    "height": 842079,
+    "date": "2024-05-04T16:22:39",
+    "worker": "Solo CK",
+    "hash": "00000000000000000001ed31baf41bc5de00eb734b1d3ecabec22763a39100e2",
+    "url": "https://mempool.space/block/00000000000000000001ed31baf41bc5de00eb734b1d3ecabec22763a39100e2"
+  },
+  {
+    "height": 841286,
+    "date": "2024-04-28T21:25:38",
+    "worker": "Solo CK",
+    "hash": "0000000000000000000122d20c94bf71bba48531644412f98e05f3aca7167feb",
+    "url": "https://mempool.space/block/0000000000000000000122d20c94bf71bba48531644412f98e05f3aca7167feb"
+  },
+  {
+    "height": 837814,
+    "date": "2024-04-05T12:15:22",
+    "worker": "Solo CK",
+    "hash": "0000000000000000000139b61c51a3f47d3e836ee78aa690a9545d2b9ed73d8c",
+    "url": "https://mempool.space/block/0000000000000000000139b61c51a3f47d3e836ee78aa690a9545d2b9ed73d8c"
+  },
+  {
+    "height": 828884,
+    "date": "2024-02-04T11:27:14",
+    "worker": "Solo CK",
+    "hash": "000000000000000000015802ce315b36411f805600d92a64b3ffb30331b23cd6",
+    "url": "https://mempool.space/block/000000000000000000015802ce315b36411f805600d92a64b3ffb30331b23cd6"
+  },
+  {
+    "height": 818588,
+    "date": "2023-11-26T16:05:56",
+    "worker": "Solo CK",
+    "hash": "0000000000000000000249e4e95a823185940476d5a0885a590ede7f31ba7fa0",
+    "url": "https://mempool.space/block/0000000000000000000249e4e95a823185940476d5a0885a590ede7f31ba7fa0"
+  },
+  {
+    "height": 814308,
+    "date": "2023-10-29T01:12:37",
+    "worker": "Solo CK",
+    "hash": "00000000000000000000f81bce14a75863fb1222862adc47595753390671e790",
+    "url": "https://mempool.space/block/00000000000000000000f81bce14a75863fb1222862adc47595753390671e790"
+  },
+  {
+    "height": 803821,
+    "date": "2023-08-18T23:35:03",
+    "worker": "Solo CK",
+    "hash": "00000000000000000001b0e1eab8a8b538f74ad1594294047a68f33b72598e78",
+    "url": "https://mempool.space/block/00000000000000000001b0e1eab8a8b538f74ad1594294047a68f33b72598e78"
+  },
+  {
+    "height": 795268,
+    "date": "2023-06-21T03:22:23",
+    "worker": "Solo CK",
+    "hash": "00000000000000000001e4a99b1ad7f3a6dc4c2675b6b3a96f965fe5c780c63e",
+    "url": "https://mempool.space/block/00000000000000000001e4a99b1ad7f3a6dc4c2675b6b3a96f965fe5c780c63e"
+  },
+  {
+    "height": 793607,
+    "date": "2023-06-09T18:58:34",
+    "worker": "Solo CK",
+    "hash": "000000000000000000009b8ba96453ebc551ff4729e18267ea2de9a4b5f6852a",
+    "url": "https://mempool.space/block/000000000000000000009b8ba96453ebc551ff4729e18267ea2de9a4b5f6852a"
+  },
+  {
+    "height": 790958,
+    "date": "2023-05-23T00:06:10",
+    "worker": "Solo CK",
+    "hash": "00000000000000000000c0ea8e978cf0946bae69db54de40a2de5c81127005fe",
+    "url": "https://mempool.space/block/00000000000000000000c0ea8e978cf0946bae69db54de40a2de5c81127005fe"
+  },
+  {
+    "height": 782867,
+    "date": "2023-03-28T09:00:47",
+    "worker": "Solo CK",
+    "hash": "000000000000000000024c78e21368732143ddd16b35feb464581b09c97b6f82",
+    "url": "https://mempool.space/block/000000000000000000024c78e21368732143ddd16b35feb464581b09c97b6f82"
+  },
+  {
+    "height": 782845,
+    "date": "2023-03-28T05:43:21",
+    "worker": "Solo CK",
+    "hash": "00000000000000000005f193b2ec4ed62dc2d88967c4c6393953abeecb8eeb56",
+    "url": "https://mempool.space/block/00000000000000000005f193b2ec4ed62dc2d88967c4c6393953abeecb8eeb56"
+  },
+  {
+    "height": 780525,
+    "date": "2023-03-12T21:34:57",
+    "worker": "Solo CK",
+    "hash": "00000000000000000002cc78c4d1bfe95f94e492028d97eff0e929c94bc6bf9d",
+    "url": "https://mempool.space/block/00000000000000000002cc78c4d1bfe95f94e492028d97eff0e929c94bc6bf9d"
+  },
+  {
+    "height": 780112,
+    "date": "2023-03-10T07:52:13",
+    "worker": "Solo CK",
+    "hash": "00000000000000000005554d191a938d5a54875c24c13c27e45ae31367896250",
+    "url": "https://mempool.space/block/00000000000000000005554d191a938d5a54875c24c13c27e45ae31367896250"
+  },
+  {
+    "height": 777942,
+    "date": "2023-02-23T10:34:21",
+    "worker": "Solo CK",
+    "hash": "00000000000000000004697da67ce0faea3526858b6a725404b27b628f5fad5c",
+    "url": "https://mempool.space/block/00000000000000000004697da67ce0faea3526858b6a725404b27b628f5fad5c"
+  },
+  {
+    "height": 772793,
+    "date": "2023-01-20T10:27:11",
+    "worker": "Solo CK",
+    "hash": "00000000000000000003f2b0cedf601824c02ba9ad129ca3531502dca525c635",
+    "url": "https://mempool.space/block/00000000000000000003f2b0cedf601824c02ba9ad129ca3531502dca525c635"
+  },
+  {
+    "height": 752868,
+    "date": "2022-09-06T09:50:58",
+    "worker": "Solo CK",
+    "hash": "000000000000000000023331c3817233e49bb141216fea1a75a3643a04410bde",
+    "url": "https://mempool.space/block/000000000000000000023331c3817233e49bb141216fea1a75a3643a04410bde"
+  },
+  {
+    "height": 733739,
+    "date": "2022-04-27T04:16:42",
+    "worker": "Solo CK",
+    "hash": "00000000000000000007997829ae5d953c5ede09646b5e6e3161d8b2d09a10cc",
+    "url": "https://mempool.space/block/00000000000000000007997829ae5d953c5ede09646b5e6e3161d8b2d09a10cc"
+  },
+  {
+    "height": 721575,
+    "date": "2022-02-03T01:17:06",
+    "worker": "Solo CK",
+    "hash": "00000000000000000005b282d6af21d85a78eabd70ea4d662994dd714f5bf162",
+    "url": "https://mempool.space/block/00000000000000000005b282d6af21d85a78eabd70ea4d662994dd714f5bf162"
+  },
+  {
+    "height": 721310,
+    "date": "2022-02-01T08:27:16",
+    "worker": "Solo CK",
+    "hash": "00000000000000000007a79a2e930f8f9ee5b6a970d36300416dff40499e294a",
+    "url": "https://mempool.space/block/00000000000000000007a79a2e930f8f9ee5b6a970d36300416dff40499e294a"
+  },
+  {
+    "height": 720175,
+    "date": "2022-01-24T11:59:13",
+    "worker": "Solo CK",
+    "hash": "00000000000000000007ed90d289f313c4f19a44438f3c4c55eca1637c4c8702",
+    "url": "https://mempool.space/block/00000000000000000007ed90d289f313c4f19a44438f3c4c55eca1637c4c8702"
+  },
+  {
+    "height": 718379,
+    "date": "2022-01-13T00:34:07",
+    "worker": "Solo CK",
+    "hash": "0000000000000000000859aae6845872298f1b9683e222bc77bcd7996d01f99f",
+    "url": "https://mempool.space/block/0000000000000000000859aae6845872298f1b9683e222bc77bcd7996d01f99f"
+  },
+  {
+    "height": 718124,
+    "date": "2022-01-11T06:56:58",
+    "worker": "Solo CK",
+    "hash": "00000000000000000005c098cc11828afdddfe06df7f1bee94e705629680aba3",
+    "url": "https://mempool.space/block/00000000000000000005c098cc11828afdddfe06df7f1bee94e705629680aba3"
+  },
+  {
+    "height": 712217,
+    "date": "2021-12-02T10:27:03",
+    "worker": "Solo CK",
+    "hash": "00000000000000000009fac1156a01afe270f5dc8821b3a64f50cefa687e2437",
+    "url": "https://mempool.space/block/00000000000000000009fac1156a01afe270f5dc8821b3a64f50cefa687e2437"
+  },
+  {
+    "height": 706369,
+    "date": "2021-10-23T22:50:10",
+    "worker": "Solo CK",
+    "hash": "000000000000000000060e6a3a648387bff97ee8aee5bfad2ad3d08a8b1519eb",
+    "url": "https://mempool.space/block/000000000000000000060e6a3a648387bff97ee8aee5bfad2ad3d08a8b1519eb"
+  },
+  {
+    "height": 689382,
+    "date": "2021-07-02T05:36:03",
+    "worker": "Solo CK",
+    "hash": "0000000000000000000c55936d7fd2fb0bfa19683f78f904f204a43b45b88f51",
+    "url": "https://mempool.space/block/0000000000000000000c55936d7fd2fb0bfa19683f78f904f204a43b45b88f51"
+  },
+  {
+    "height": 660588,
+    "date": "2020-12-09T06:19:21",
+    "worker": "Solo CK",
+    "hash": "00000000000000000000234eb03bff844083b81b9440ab2750a41defcc909e2f",
+    "url": "https://mempool.space/block/00000000000000000000234eb03bff844083b81b9440ab2750a41defcc909e2f"
+  },
+  {
+    "height": 632928,
+    "date": "2020-06-03T21:29:30",
+    "worker": "Solo CK",
+    "hash": "0000000000000000000a7292ccf3210d10e809b41ebfebd0c1c3f7c0f230877d",
+    "url": "https://mempool.space/block/0000000000000000000a7292ccf3210d10e809b41ebfebd0c1c3f7c0f230877d"
+  },
+  {
+    "height": 621073,
+    "date": "2020-03-10T10:41:08",
+    "worker": "Solo CK",
+    "hash": "0000000000000000000ea078100e319ed6efafcd6b324c1a3c74974e71ab53f2",
+    "url": "https://mempool.space/block/0000000000000000000ea078100e319ed6efafcd6b324c1a3c74974e71ab53f2"
+  },
+  {
+    "height": 618616,
+    "date": "2020-02-23T08:13:22",
+    "worker": "Solo CK",
+    "hash": "0000000000000000000cc594ebac00d8cd1ecd5f9155aaddfd9c45eec1955ee9",
+    "url": "https://mempool.space/block/0000000000000000000cc594ebac00d8cd1ecd5f9155aaddfd9c45eec1955ee9"
+  },
+  {
+    "height": 600292,
+    "date": "2019-10-21T01:04:45",
+    "worker": "Solo CK",
+    "hash": "00000000000000000014146c74735b5268d1477e2e92132041e3f19533eaf8b9",
+    "url": "https://mempool.space/block/00000000000000000014146c74735b5268d1477e2e92132041e3f19533eaf8b9"
+  },
+  {
+    "height": 566324,
+    "date": "2019-03-09T13:15:21",
+    "worker": "Solo CK",
+    "hash": "000000000000000000164246dd2ac0592b44b48457acf13943b816629413f300",
+    "url": "https://mempool.space/block/000000000000000000164246dd2ac0592b44b48457acf13943b816629413f300"
+  },
+  {
+    "height": 533171,
+    "date": "2018-07-22T22:22:10",
+    "worker": "Solo CK",
+    "hash": "0000000000000000000be26df80d6659e3f7ed21dc4d021ff543fe9352fd601c",
+    "url": "https://mempool.space/block/0000000000000000000be26df80d6659e3f7ed21dc4d021ff543fe9352fd601c"
+  },
+  {
+    "height": 528266,
+    "date": "2018-06-19T21:10:51",
+    "worker": "Solo CK",
+    "hash": "00000000000000000001b7eb66dd7092971dae0688e099503d381377f7e8f622",
+    "url": "https://mempool.space/block/00000000000000000001b7eb66dd7092971dae0688e099503d381377f7e8f622"
+  },
+  {
+    "height": 519311,
+    "date": "2018-04-21T21:00:49",
+    "worker": "Solo CK",
+    "hash": "0000000000000000001381004f0bf7b0578189d6853cd8af5098994095213e38",
+    "url": "https://mempool.space/block/0000000000000000001381004f0bf7b0578189d6853cd8af5098994095213e38"
+  },
+  {
+    "height": 517871,
+    "date": "2018-04-12T15:20:15",
+    "worker": "Solo CK",
+    "hash": "000000000000000000492368243c8601cf531afed6be41c3a9ebce999c3ed8ce",
+    "url": "https://mempool.space/block/000000000000000000492368243c8601cf531afed6be41c3a9ebce999c3ed8ce"
+  },
+  {
+    "height": 513974,
+    "date": "2018-03-17T18:22:51",
+    "worker": "Solo CK",
+    "hash": "00000000000000000043e6342976184769da5f2367df28de70d497981048b2ff",
+    "url": "https://mempool.space/block/00000000000000000043e6342976184769da5f2367df28de70d497981048b2ff"
+  },
+  {
+    "height": 503670,
+    "date": "2018-01-11T10:34:59",
+    "worker": "Solo CK",
+    "hash": "00000000000000000077140243064000ba35b22d3e2440e936a722b90cd09365",
+    "url": "https://mempool.space/block/00000000000000000077140243064000ba35b22d3e2440e936a722b90cd09365"
+  },
+  {
+    "height": 500433,
+    "date": "2017-12-21T18:48:51",
+    "worker": "Solo CK",
+    "hash": "0000000000000000001bb297b8d0fa8a218f0b5de5a1987412d40ff2aa583a2d",
+    "url": "https://mempool.space/block/0000000000000000001bb297b8d0fa8a218f0b5de5a1987412d40ff2aa583a2d"
+  },
+  {
+    "height": 499241,
+    "date": "2017-12-14T11:14:20",
+    "worker": "Solo CK",
+    "hash": "00000000000000000068271cffbbc743f01a4db7cf84cbd34dc28198dff05b50",
+    "url": "https://mempool.space/block/00000000000000000068271cffbbc743f01a4db7cf84cbd34dc28198dff05b50"
+  },
+  {
+    "height": 497143,
+    "date": "2017-12-02T04:20:25",
+    "worker": "Solo CK",
+    "hash": "0000000000000000001c8b137fdeaf482b4e58d6a10eac23bef43d7ffb7ef035",
+    "url": "https://mempool.space/block/0000000000000000001c8b137fdeaf482b4e58d6a10eac23bef43d7ffb7ef035"
+  },
+  {
+    "height": 495939,
+    "date": "2017-11-24T20:33:32",
+    "worker": "Solo CK",
+    "hash": "000000000000000000bffa9dfdb6459e5139964d34b10d42f7d4d3713f63d8bb",
+    "url": "https://mempool.space/block/000000000000000000bffa9dfdb6459e5139964d34b10d42f7d4d3713f63d8bb"
+  },
+  {
+    "height": 493496,
+    "date": "2017-11-07T17:09:57",
+    "worker": "Solo CK",
+    "hash": "0000000000000000001d08473babf43ba09292397684cc8d8744ed57a6a54040",
+    "url": "https://mempool.space/block/0000000000000000001d08473babf43ba09292397684cc8d8744ed57a6a54040"
+  },
+  {
+    "height": 489739,
+    "date": "2017-10-14T05:06:30",
+    "worker": "Solo CK",
+    "hash": "00000000000000000054efe309c3b92426570624fb92628391488adf28f33d04",
+    "url": "https://mempool.space/block/00000000000000000054efe309c3b92426570624fb92628391488adf28f33d04"
+  },
+  {
+    "height": 486481,
+    "date": "2017-09-22T14:07:34",
+    "worker": "Solo CK",
+    "hash": "00000000000000000001f28e96dea3af4ba0222478f46e584e20b4bb188f6d10",
+    "url": "https://mempool.space/block/00000000000000000001f28e96dea3af4ba0222478f46e584e20b4bb188f6d10"
+  },
+  {
+    "height": 484634,
+    "date": "2017-09-11T09:01:26",
+    "worker": "Solo CK",
+    "hash": "00000000000000000043c56194a7d7e19490565db900e6857ada85492228f91f",
+    "url": "https://mempool.space/block/00000000000000000043c56194a7d7e19490565db900e6857ada85492228f91f"
+  },
+  {
+    "height": 483272,
+    "date": "2017-09-03T09:17:30",
+    "worker": "Solo CK",
+    "hash": "000000000000000000a4e67b4d80f7b478c5a83afcf4ab2da64894a057109e2a",
+    "url": "https://mempool.space/block/000000000000000000a4e67b4d80f7b478c5a83afcf4ab2da64894a057109e2a"
+  },
+  {
+    "height": 481738,
+    "date": "2017-08-23T14:16:47",
+    "worker": "Solo CK",
+    "hash": "0000000000000000012fe6e2b3668dac909f67e9948683abd6963c59390097f7",
+    "url": "https://mempool.space/block/0000000000000000012fe6e2b3668dac909f67e9948683abd6963c59390097f7"
+  },
+  {
+    "height": 479926,
+    "date": "2017-08-10T09:51:50",
+    "worker": "Solo CK",
+    "hash": "0000000000000000005f2db8a841e47ccbfdbc62135f819a2b8027511db70611",
+    "url": "https://mempool.space/block/0000000000000000005f2db8a841e47ccbfdbc62135f819a2b8027511db70611"
+  },
+  {
+    "height": 477392,
+    "date": "2017-07-24T17:59:35",
+    "worker": "Solo CK",
+    "hash": "0000000000000000012288cec644c7ab65fcce61adaf30316ce1ccfcc99791f9",
+    "url": "https://mempool.space/block/0000000000000000012288cec644c7ab65fcce61adaf30316ce1ccfcc99791f9"
+  },
+  {
+    "height": 476641,
+    "date": "2017-07-20T04:31:38",
+    "worker": "Solo CK",
+    "hash": "000000000000000001190eb117434d9d2cc40a0a01bcb6ec954f16b565dbfd4e",
+    "url": "https://mempool.space/block/000000000000000001190eb117434d9d2cc40a0a01bcb6ec954f16b565dbfd4e"
+  },
+  {
+    "height": 470010,
+    "date": "2017-06-06T07:50:28",
+    "worker": "Solo CK",
+    "hash": "000000000000000001987d8ecf3c0037f35f5081250651420921f3aaa4f6cff7",
+    "url": "https://mempool.space/block/000000000000000001987d8ecf3c0037f35f5081250651420921f3aaa4f6cff7"
+  },
+  {
+    "height": 464144,
+    "date": "2017-04-30T05:18:12",
+    "worker": "Solo CK",
+    "hash": "0000000000000000019c420cbea0a5cd1c9008ab45b9e887d6c3ce1fb3c9cafc",
+    "url": "https://mempool.space/block/0000000000000000019c420cbea0a5cd1c9008ab45b9e887d6c3ce1fb3c9cafc"
+  },
+  {
+    "height": 460488,
+    "date": "2017-04-05T08:43:49",
+    "worker": "Solo CK",
+    "hash": "00000000000000000103da01db110e5b09279ace728c2d3f947fa174f8524351",
+    "url": "https://mempool.space/block/00000000000000000103da01db110e5b09279ace728c2d3f947fa174f8524351"
+  },
+  {
+    "height": 459083,
+    "date": "2017-03-26T21:14:30",
+    "worker": "Solo CK",
+    "hash": "000000000000000001b64e717c807ebef0561c3dd333316b07a5d974375470a9",
+    "url": "https://mempool.space/block/000000000000000001b64e717c807ebef0561c3dd333316b07a5d974375470a9"
+  },
+  {
+    "height": 453586,
+    "date": "2017-02-18T07:47:37",
+    "worker": "Solo CK",
+    "hash": "000000000000000001718c020570d4a0ac5fd71f094e832866fd9cd673570de1",
+    "url": "https://mempool.space/block/000000000000000001718c020570d4a0ac5fd71f094e832866fd9cd673570de1"
+  },
+  {
+    "height": 453478,
+    "date": "2017-02-17T14:57:58",
+    "worker": "Solo CK",
+    "hash": "000000000000000001c4984306153b93ccc027b693289791cef818706a71cace",
+    "url": "https://mempool.space/block/000000000000000001c4984306153b93ccc027b693289791cef818706a71cace"
+  },
+  {
+    "height": 450328,
+    "date": "2017-01-27T21:46:40",
+    "worker": "Solo CK",
+    "hash": "000000000000000000096453b092e098538f56fb6889ec601cfa037ecb6ee540",
+    "url": "https://mempool.space/block/000000000000000000096453b092e098538f56fb6889ec601cfa037ecb6ee540"
+  },
+  {
+    "height": 447476,
+    "date": "2017-01-10T12:24:40",
+    "worker": "Solo CK",
+    "hash": "00000000000000000228ee7b45948a123bdd647ab64c627808f604226670a7c5",
+    "url": "https://mempool.space/block/00000000000000000228ee7b45948a123bdd647ab64c627808f604226670a7c5"
+  },
+  {
+    "height": 445852,
+    "date": "2016-12-30T19:09:54",
+    "worker": "Solo CK",
+    "hash": "00000000000000000169c5804bb4b6ad6767f36b6eb0355f84c759bbc67bffac",
+    "url": "https://mempool.space/block/00000000000000000169c5804bb4b6ad6767f36b6eb0355f84c759bbc67bffac"
+  }
+]
